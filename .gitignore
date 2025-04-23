@@ -1,0 +1,48 @@
+# Vagrant関連
+.vagrant/
+*.log
+*.box
+Vagrantfile.*.json
+vagrant_ansible_inventory_*
+
+# Kubernetes関連
+kubeconfig
+*.kubeconfig
+*.kube/config
+.kube/
+kubectl
+kubectx
+kubens
+node-token
+*.pem
+*.crt
+*.key
+*.pub
+
+# Rancher/K3s関連
+.rancher/
+.k3s/
+
+# OS関連
+.DS_Store
+Thumbs.db
+.directory
+
+# エディタ・IDE関連
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ログやテンポラリファイル
+*.log
+*.tmp
+logs/
+tmp/
+
+# 秘密鍵・認証情報
+*.env
+.env*
+secrets/
+.secrets/
