@@ -10,3 +10,5 @@ for file in /home/vagrant/confs/*/*.yaml; do
     exit 1
   fi
 done
+
+sudo kubectl apply -f /home/vagrant/confs/ingress.yaml
