@@ -4,8 +4,8 @@ metadata:
   name: app-two
 spec:
   selector:
-    app: MyApp
+    app: nginx
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 9376
+    targetPort: 80
