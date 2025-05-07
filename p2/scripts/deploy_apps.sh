@@ -1,14 +1,13 @@
 #!/bin/bash
 
-# applay all confs/*.yaml
-for file in /home/vagrant/confs/*/*.yaml; do
-  if [ -f "$file" ]; then
-    echo "Applying $file..."
-    sudo kubectl apply -f "$file"
-  else
-    echo "No YAML files found in /home/vagrant/confs/"
-    exit 1
-  fi
-done
+# apply ingress-nginx
+sudo kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
 
+# apply all confs/*.yaml
+sudo kubectl apply -f /home/vagrant/confs/app-one/deploy.yaml
+sudo kubectl apply -f /home/vagrant/confs/app-one/service.yaml
+sudo kubectl apply -f /home/vagrant/confs/app-two/deploy.yaml
+sudo kubectl apply -f /home/vagrant/confs/app-two/service.yaml
+sudo kubectl apply -f /home/vagrant/confs/app-three/deploy.yaml
+sudo kubectl apply -f /home/vagrant/confs/app-three/service.yaml
 sudo kubectl apply -f /home/vagrant/confs/ingress.yaml
