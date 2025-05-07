@@ -4,7 +4,7 @@ metadata:
   name: app-two
 spec:
   selector:
-    app: nginx
+    app: app-three
   ports:
   - protocol: TCP
     port: 80
