@@ -4,7 +4,7 @@ metadata:
   name: app-two
 spec:
   selector:
-    app: app-three
+    app: app-two
   ports:
   - protocol: TCP
     port: 80
