@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: wil-playground
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/argoproj/argocd-example-apps.git
+    repoURL: https://github.com/shima8823/IoT-shshimad.git
     targetRevision: HEAD
-    path: guestbook
+    path: manifests
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+    namespace: dev
