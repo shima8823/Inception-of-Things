@@ -1,0 +1,46 @@
+global:
+  hosts:
+    domain: example.com
+    externalIP: 127.0.0.1
+    # memory使用量を抑えるため
+    rails:
+      bootsnap:
+        enabled: false
+
+prometheus:
+  install: false
+gitlab-runner:
+  install: false
+
+gitlab:
+  webservice:
+    minReplicas: 1
+    maxReplicas: 1
+    resources:
+      # minimum of 1.25GB per worker [参考] https://docs.gitlab.com/charts/charts/gitlab/webservice/#resources
+      requests:
+        memory: 1.5Gi
+      limits:
+        memory: 2Gi
+  sidekiq:
+    minReplicas: 1
+    maxReplicas: 1
+    resources:
+    # 典型的には300 ~ 500MB [参考] https://github.com/sidekiq/sidekiq/wiki/Memory
+      requests:
+        memory: 500Mi
+      limits:
+        memory: 1Gi
+  gitaly:
+    minReplicas: 1
+    maxReplicas: 1
+    # 1GB超になる可能性 [参考] https://gitlab.com/gitlab-com/runbooks/-/blob/v2.183.0/docs/gitaly/git-high-cpu-and-memory-usage.md
+    resources:
+      requests:
+        memory: 500Mi
+      limits:
+        memory: 1Gi
+registry:
+  hpa:
+    minReplicas: 1
+    maxReplicas: 1
