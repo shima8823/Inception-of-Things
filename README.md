@@ -99,7 +99,7 @@ bash ./scripts/setup-argocd.sh
 この手順では、GitOpsの主要な機能である「宣言的な設定管理」と「自動的な同期」を確認します。
 
     a. 監視リポジトリの設定
-    1. 監視リポジトリ（https://github.com/shima8823/IoT-shshimad.git）をフォーク
+    1. 監視リポジトリ（https://github.com/shima8823/IoT-shshimad.git ）をフォーク
     2. `p3/confs/application.yaml`の`repoURL`をフォークしたリポジトリのURLに更新
     3. 変更を適用:
     ```bash
