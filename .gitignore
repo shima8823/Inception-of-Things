@@ -46,3 +46,5 @@ tmp/
 .env*
 secrets/
 .secrets/
+
+Todo.md
