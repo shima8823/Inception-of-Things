@@ -2,6 +2,7 @@ global:
   hosts:
     domain: example.com
     externalIP: 127.0.0.1
+    https: false
     # memory使用量を抑えるため
     rails:
       bootsnap:
