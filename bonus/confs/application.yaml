@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/shima8823/IoT-shshimad.git
+    repoURL: http://localhost/root/IoT-shshimad.git
     targetRevision: HEAD
     path: manifests
   destination:
