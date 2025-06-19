@@ -44,7 +44,9 @@ tmp/
 # 秘密鍵・認証情報
 *.env
 .env*
+!.env.example
 secrets/
 .secrets/
 
+# Misc
 notes/
