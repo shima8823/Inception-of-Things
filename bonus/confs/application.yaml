@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: http://localhost/root/IoT-shshimad.git
+    repoURL: http://gitlab-webservice-default.gitlab.svc.cluster.local:8181/root/IoT-shshimad.git
     targetRevision: HEAD
     path: manifests
   destination:
