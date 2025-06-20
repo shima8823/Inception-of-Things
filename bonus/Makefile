@@ -1,4 +1,4 @@
-.PHONY: all create-cluster install-gitlab wait-gitlab add-git-repo install-argocd wait-argocd port-forward
+.PHONY: all create-cluster install-gitlab wait-gitlab add-git-repo install-argocd wait-argocd port-forward delete-cluster
 
 # リソース不足を防ぐため、GitLabとArgoCDのインストールは順番に実行する
 all: create-cluster install-gitlab wait-gitlab install-argocd wait-argocd port-forward
@@ -33,3 +33,7 @@ wait-argocd:
 port-forward:
 	@echo "ポートフォワード開始..."
 	@bash ./scripts/port_forward.sh 
+
+delete-cluster:
+	@echo "クラスタ削除中..."
+	@k3d cluster delete iot-shshimad-bonus
