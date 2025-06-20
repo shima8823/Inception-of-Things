@@ -7,7 +7,7 @@ echo "argocd url: http://127.0.0.1:8080"
 echo "argocd password: $(kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d)"
 
 # GitLab
-kubectl port-forward svc/gitlab-webservice-default -n gitlab 8081:8181 --address 0.0.0.0 > /dev/null 2>&1 &
+kubectl port-forward svc/gitlab-webservice-default -n gitlab 8081:8181 > /dev/null 2>&1 &
 echo "gitlab processId: $!"
 echo "gitlab url: http://127.0.0.1:8081"
 echo "gitlab password: $(kubectl get secret -n gitlab gitlab-gitlab-initial-root-password -o jsonpath="{.data.password}" | base64 -d)"
