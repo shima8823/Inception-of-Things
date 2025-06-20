@@ -13,6 +13,7 @@ if [ -z "$GITLAB_TOKEN" ]; then
   exit 1
 fi
 
+# localのgitlabにリポジトリをインポート
 curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
      --header "Content-Type: application/json" \
      -X POST "http://localhost:8081/api/v4/projects" \
