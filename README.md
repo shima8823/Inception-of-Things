@@ -124,3 +124,15 @@ bash ./scripts/setup-argocd.sh
     - バージョン管理: 変更履歴がGitで追跡可能
     - デプロイメントの追跡: ArgoCD UIで変更の状態を確認可能
     - ロールバックの容易さ: 問題が発生した場合、Gitの履歴から以前の状態に戻せる
+
+### bonus: GitLab連携によるGitOps拡張
+- ローカル環境にGitLabを導入し、k3dクラスタと連携したGitOps環境を構築するボーナス課題です。
+- GitLabは専用のnamespace（gitlab）で動作し、ArgoCDやアプリケーションのデプロイメントと連携します。
+- これにより、Part3で実装したGitOpsワークフローを、ローカルのGitLabリポジトリを用いて再現・運用できます。
+- セットアップや詳細な手順は `bonus/README.md` を参照してください。
+
+#### 主なポイント
+- GitLabインスタンスはローカルで稼働
+- k3dクラスタとGitLabの連携設定を実施
+- gitlab namespaceの作成
+- Part3の全機能（ArgoCDによるGitOps運用）がローカルGitLabでも動作
