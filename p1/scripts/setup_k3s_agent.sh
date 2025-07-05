@@ -3,6 +3,7 @@
 # 必要なパッケージのインストール
 apt-get update
 apt-get install -y curl wget git
+echo "alias k='sudo k3s kubectl'" >> /home/vagrant/.bashrc
 
 # トークンを取得
 TOKEN=$(cat /vagrant/node-token)
