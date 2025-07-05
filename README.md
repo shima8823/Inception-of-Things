@@ -72,6 +72,7 @@ curl http://192.168.56.110
 
 2. ブラウザで以下のURLにアクセス：
 - http://192.168.56.110 - アプリケーション3を表示
+- ブラウザでhost名を設定する場合は、chromeの拡張機能 "Mobheader" を使用
 
 ### p3: k3dとArgoCDを使用したGitOps構成
 - k3dを使用して軽量なKubernetesクラスターを構築
